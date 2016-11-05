@@ -4,17 +4,22 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+
 import { CesiumComponent } from './cesium/cesium.component';
+import { DefaultComponent } from './default/default.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CesiumComponent
+    CesiumComponent,
+    DefaultComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
