@@ -15,9 +15,12 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.css"
+        "styles.css",
+        "../node_modules/cesium/Build/Cesium/Widgets/widgets.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/cesium/Build/Cesium/Cesium.js"
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
