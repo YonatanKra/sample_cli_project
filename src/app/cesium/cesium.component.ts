@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, Renderer, ViewChild } from '@angular/core';
+import "cesium/Build/Cesium/Cesium.js"
 
 /**
  * This is my cesium comment
