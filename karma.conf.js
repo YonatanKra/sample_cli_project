@@ -12,8 +12,17 @@ module.exports = function (config) {
       require('angular-cli/plugins/karma')
     ],
     files: [
-      { pattern: './src/test.ts', watched: false }
+      {pattern: './src/test.ts', watched: false},
+      {pattern: './src/assets/Cesium/Assets/*.json', watched: false, 'included': false},
+      {pattern: './src/assets/Cesium/Assets/**/*.json', watched: false, 'included': false},
+      {pattern: './src/assets/Cesium/Widgets/Images/**/*.png', watched: false, 'included': false},
+      {pattern: './src/assets/Cesium/Widgets/Images/**/*.svg', watched: false, 'included': false},
+      {pattern: './src/assets/Cesium/Assets/Textures/**/*.jpg', watched: false, 'included': false},
+      {pattern: './src/assets/Cesium/Assets/Textures/*.jpg', watched: false, 'included': false},
     ],
+    proxies: {
+      "/assets/": "/base/src/assets/"
+    },
     preprocessors: {
       './src/test.ts': ['angular-cli']
     },
@@ -26,6 +35,9 @@ module.exports = function (config) {
     angularCli: {
       config: './angular-cli.json',
       environment: 'dev'
+    },
+    mime: {
+      'text/x-typescript': ['ts','tsx']
     },
     reporters: ['progress', 'karma-remap-istanbul'],
     port: 9876,
